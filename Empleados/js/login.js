@@ -26,7 +26,7 @@ function login() {
         localStorage.setItem("token", res.data.message);
         window.location.href = "empleados.html";
       } else {
-        alert("¡Ups! Usuario y/o contraseña incorrectos.");
+        alert("Usuario o contraseña incorrectos");
       }
     })
     .catch(function (err) {
