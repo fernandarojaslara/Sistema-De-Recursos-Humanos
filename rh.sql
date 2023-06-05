@@ -39,9 +39,9 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`admin_id`, `name`, `email`, `password`) VALUES
-(1, 'Margarita', 'maggie@gmail.com', '1234567'),
-(2, 'Eduardo', 'eduardo@gmail.com', '1234567'),
-(3, 'Orlando', 'orlando@gmail.com', '1234567');
+(1, 'Fernanda', 'fer@gmail.com', '1234567'),
+(2, 'Margarita', 'mags@gmail.com', '1234567'),
+(3, 'Daniel', 'daniel@gmail.com', '1234567');
 
 -- --------------------------------------------------------
 
@@ -63,9 +63,9 @@ CREATE TABLE `empleados` (
 --
 
 INSERT INTO `empleados` (`empleado_id`, `nombre`, `apellidos`, `telefono`, `email`, `direccion`) VALUES
-(1, 'Jenifer', 'Gúzman Villar', '4425687926', 'jenifer@gmail.com', 'Emiliano Zapata #72, Corregidora'),
-(2, 'Jesus', 'Duarte Calvo', '4421102345', 'jesus@gmail.com', 'Camino Real S.N., Nuevo Juriquilla'),
-(3, 'Ruth', 'Hernández', '4427895634', 'ruth@gmail.com', 'San Vicente #45, Querétaro');
+(1, 'Fernanda', 'Rojas Lara', '4425687926', 'fernanda@gmail.com', 'Privada reforma #34, Quertaro'),
+(2, 'Katia', 'Duran Garza', '4421102345', 'katia@gmail.com', 'Plateros #23, Queretaro'),
+(3, 'Raul', 'López García', '4427895634', 'raul@gmail.com', 'Tierra blanca #78, Queretaro');
 
 --
 -- Índices para tablas volcadas
