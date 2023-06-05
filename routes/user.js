@@ -20,7 +20,7 @@ user.post("/login", async (req, res, next) => {
     } else {
       return res
         .status(200)
-        .json({ code: 401, message: "USUARIO Y/O CONTRASEÑA INCORRECTOS" });
+        .json({ code: 401, message: "USUARIO O CONTRASEÑA INCORRECTOS" });
     }
   }
   return res.status(200).json({ code: 500, message: "CAMPOS INCOMPLETOS" });
