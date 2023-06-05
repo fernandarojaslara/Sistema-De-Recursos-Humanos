@@ -24,11 +24,11 @@ empleado.post("/", async (req, res, next) => {
     }
     return res
       .status(500)
-      .json({ code: 500, message: "¡Ups! Ocurrio Un Error" });
+      .json({ code: 500, message: "Ocurrio un error" });
   }
   return res
     .status(500)
-    .json({ code: 500, message: "Lo sentimos campos incompletos." });
+    .json({ code: 500, message: " Campos incompletos." });
 });
 
 /*  LISTO: MODIFICAR EMPLEADOS */
@@ -41,15 +41,15 @@ empleado.put("/:id([0-9]{1,3})", async (req, res, next) => {
     if (rows.affectedRows == 1) {
       return res
         .status(200)
-        .json({ code: 200, message: "¡Empleado Actualizado Correctamente!" });
+        .json({ code: 200, message: "¡Empleado actualizado correctamente!" });
     }
     return res
       .status(500)
-      .json({ code: 500, message: "¡Ups! Ocurrio Un Error" });
+      .json({ code: 500, message: "Ocurrio un error" });
   }
   return res
     .status(500)
-    .json({ code: 500, message: "Lo sentimos campos incompletos." });
+    .json({ code: 500, message: "Campos incompletos." });
 });
 
 /*  LISTO: Eliminar Empleados */
@@ -59,11 +59,11 @@ empleado.delete("/:eaddress([A-Za-z@{1}.{1}]+)", async (req, res, next) => {
   if (rows.affectedRows == 1) {
     return res
       .status(200)
-      .json({ code: 200, message: "¡Empleado Borrado Correctamente!" });
+      .json({ code: 200, message: "¡Empleado eliminado correctamente!" });
   }
   return res
     .status(404)
-    .json({ code: 404, message: "¡Ups! Empleado No Encontrado." });
+    .json({ code: 404, message: "Empleado no encontrado." });
 });
 
 /*  LISTO: BUCAR POR NOMBRE */
@@ -77,7 +77,7 @@ empleado.get("/:name([A-Za-z]+)", async (req, res, next) => {
   }
   return res
     .status(400)
-    .send({ code: 404, message: "¡Ups! Empleado No Encontrado." });
+    .send({ code: 404, message: "Empleado no encontrado." });
 });
 
 module.exports = empleado;
