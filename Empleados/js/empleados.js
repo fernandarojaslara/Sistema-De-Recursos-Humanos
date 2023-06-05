@@ -40,7 +40,7 @@ function register() {
     .then(function (res) {
       if (res.data.code === 1) {
         localStorage.setItem("token", res.data.message);
-        alert("Registro Exitoso");
+        alert("Registro exitoso");
       } else {
         alert("Usuario no encontrado");
       }
