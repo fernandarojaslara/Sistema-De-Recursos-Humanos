@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Orlas-Gonzalez/express-node-js-app.git"
+    "url": "https://github.com/fernandarojaslara/Sistema-De-Recursos-Humanos.git"
   },
   "keywords": [
     "node",
@@ -17,12 +17,12 @@
     "jwt",
     "mysql"
   ],
-  "author": "Orlando García González",
+  "author": "Fernanda Rojas",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Orlas-Gonzalez/express-node-js-app.git/issues"
+    "url": "https://github.com/fernandarojaslara/Sistema-De-Recursos-Humanos.git/issues"
   },
-  "homepage": "https://github.com/Orlas-Gonzalez/express-node-js-app.git#readme",
+  "homepage": "https://github.com/fernandarojaslara/Sistema-De-Recursos-Humanos.git#readme",
   "dependencies": {
     "express": "^4.18.1",
     "jsonwebtoken": "^8.5.1",
