@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Taller Node.js</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/empleados.js"></script>
+    <link rel="stylesheet" href="./css/empleados.css" />
+  </head>
+  <body>
+    <div class="containerInstruccion">
+      <h1 class="title">Sistema De Empleados - Taller De Node.js 2023</h1>
+      <a href="#" class="btn btn-danger endBlock" onClick="exitSystem()"
+        >Salir Del Sistema</a
+      >
+    </div>
+    <!-- CARDS -->
+    <div class="containerInsert">
+      <div class="card" style="width: 18rem" id="cardRegister">
+        <div class="card-body">
+          <h5 class="card-title">AGREGAR EMPLEADO</h5>
+          <div class="mb-3">
+            <label for="registerName" class="form-label">Nombre</label>
+            <input
+              type="text"
+              class="form-control"
+              id="registerName"
+              placeholder="Nombre"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="registerLastName" class="form-label">Apellidos</label>
+            <input
+              type="text"
+              class="form-control"
+              id="registerLastName"
+              placeholder="Apellidos"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="registerPhone" class="form-label">Teléfono</label>
+            <input
+              type="text"
+              class="form-control"
+              id="registerPhone"
+              placeholder="Teléfono"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="registerMail" class="form-label"
+              >Correo Electrónico</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="registerMail"
+              placeholder="email@example.com"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="registerAddress" class="form-label">Dirección</label>
+            <input
+              type="text"
+              class="form-control"
+              id="registerAddress"
+              placeholder="Dirección"
+            />
+          </div>
+          <a href="#" class="btn btn-dark btn-block" onClick="register()"
+            >Registrar</a
+          >
+        </div>
+      </div>
+      <div class="card" style="width: 18rem" id="cardUpdate">
+        <div class="card-body">
+          <h5 class="card-title">ACTUALIZAR EMPLEADO</h5>
+          <div class="mb-3">
+            <label for="updateID" class="form-label"
+              >ID de empleado a actualizar</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="updateID"
+              placeholder="ID"
+            />
+            <label class="form-label"
+              >NOTA: Debes buscar tu empleado para conocer el ID
+            </label>
+          </div>
+          <div class="mb-3">
+            <label for="updateName" class="form-label">Nombre</label>
+            <input
+              type="email"
+              class="form-control"
+              id="updateName"
+              placeholder="Nombre"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="updateLastName" class="form-label">Apellidos</label>
+            <input
+              type="email"
+              class="form-control"
+              id="updateLastName"
+              placeholder="Apellidos"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="updatePhone" class="form-label">Teléfono</label>
+            <input
+              type="email"
+              class="form-control"
+              id="updatePhone"
+              placeholder="Teléfono"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="updateMail" class="form-label"
+              >Correo Electrónico</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="updateMail"
+              placeholder="email@example.com"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="updateAddress" class="form-label">Dirección</label>
+            <input
+              type="email"
+              class="form-control"
+              id="updateAddress"
+              placeholder="Dirección"
+            />
+          </div>
+          <a href="#" class="btn btn-dark btn-block" onClick="update()"
+            >Actualizar</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="containerSearch">
+      <div class="card" style="width: 18rem" id="cardDelete">
+        <div class="card-body">
+          <h5 class="card-title">ELIMINAR EMPLEADO</h5>
+          <div class="mb-3">
+            <label for="deleteMail" class="form-label"
+              >Correo Electrónico</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="deleteMail"
+              placeholder="email@example.com"
+            />
+          </div>
+          <a href="#" class="btn btn-danger btn-block" onClick="deletE()"
+            >Eliminar</a
+          >
+        </div>
+      </div>
+      <div class="card" style="width: 18rem" id="cardSearch">
+        <div class="card-body">
+          <h5 class="card-title">BUSCAR EMPLEADO</h5>
+          <div class="mb-3">
+            <label for="searchName" class="form-label">Nombre</label>
+            <input
+              type="email"
+              class="form-control"
+              id="searchName"
+              placeholder="Nombre"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="consultArea" class="form-label">Consulta</label>
+            <textarea class="form-control" id="consultArea" rows="3"></textarea>
+          </div>
+          <a href="#" class="btn btn-dark btn-block" onClick="searchE()"
+            >Buscar</a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
