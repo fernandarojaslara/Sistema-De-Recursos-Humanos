@@ -40,9 +40,9 @@ function register() {
     .then(function (res) {
       if (res.data.code === 1) {
         localStorage.setItem("token", res.data.message);
-        alert("¡El Empleado Se Registro Exitosamente!");
+        alert("Registro Exitoso");
       } else {
-        alert("¡Ups! Usuario No Encontrado");
+        alert("Usuario no encontrado");
       }
     })
     .catch(function (err) {
@@ -73,9 +73,9 @@ function update() {
     .then(function (res) {
       if (res.data.code === 200) {
         localStorage.setItem("token", res.data.message);
-        alert("¡El Empleado Se Actualizó Exitosamente!");
+        alert("Actualización Exitosa");
       } else {
-        alert("¡Ups! Usuario No Encontrado");
+        alert("Usuario no encontrado");
       }
     })
     .catch(function (err) {
@@ -99,7 +99,7 @@ function deletE() {
         localStorage.setItem("token", res.data.message);
         alert("¡El Empleado Se Elimino Exitosamente!");
       } else {
-        alert("¡Ups! Usuario No Encontrado");
+        alert("Usuario no encontrado");
       }
     })
     .catch(function (err) {
@@ -137,9 +137,9 @@ function searchE() {
           " \n" +
           direccion;
         $("#consultArea").val(strResult);
-        alert("¡Empleado Encontrado!");
+        alert("Se encontró el empleado");
       } else {
-        alert("¡Ups! Usuario No Encontrado");
+        alert("Usuario no encontrado");
       }
     })
     .catch(function (err) {
